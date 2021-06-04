@@ -364,3 +364,43 @@ p {
     padding-right: 0.4rem;
   }
 }
+/* contact  */
+.contact {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: var(--clr-grey3);
+}
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 8rem;
+}
+.contact-form h2 {
+  text-align: center;
+  padding-top: 1rem;
+  color: var(--clr-grey2);
+}
+.form-group {
+  text-align: center;
+}
+.form-control {
+  /* font-size: 1.5rem; */
+  border: none;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--color-white);
+  letter-spacing: var(--spacing);
+}
+.contact-info span {
+  color: var(--clr-primary);
+}
+.contact-info {
+  margin-top: 5rem;
+}
+.contact-btn {
+  text-align: center;
+  margin: 0 auto;
+}
