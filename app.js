@@ -1,16 +1,26 @@
 // setup nav
 const navBtn = document.getElementById("nav-btn");
 const navbar = document.getElementById("navbar");
-const navClose = document.getElementById("nav-close");
+const navOut = document.getElementsByClassName("main__heading")[0];
+const navlinks = document.getElementsByClassName("nav-link");
+console.log(navlinks);
+
+const navClose = document.getElementsByClassName("nav-close")[0];
 // show nav
 navBtn.addEventListener("click", () => {
-  navbar.classList.add("showNav");
+  navbar.classList.add("show-Navbar");
 });
 // close nav
 navClose.addEventListener("click", () => {
-  navbar.classList.remove("showNav");
+  navbar.classList.remove("show-Navbar");
 });
-//setup date
-const date = (document.getElementById(
-  "date"
-).innerHTML = new Date().getFullYear());
+
+window.addEventListener("click", (e) => {
+  Array.from(navlinks).forEach((nav) => {
+    if (e.target == nav) {
+      navbar.classList.remove("show-Navbar");
+    } else if (e.target == navOut) {
+      navbar.classList.remove("show-Navbar");
+    }
+  });
+});

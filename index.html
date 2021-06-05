@@ -16,23 +16,24 @@
   <body>
     <!-- navbar -->
     <!-- nav-button -->
-    <span class="nav-btn" id="nav-btn">
-      <i class="fas fa-bars"></i>
-    </span>
-    <nav class="navbar" id="navbar">
-      <header>
-        <span class="nav-close"><i class="far fa-window-close"></i></span>
-      </header>
-      <ul class="navigation">
-        <li class="nav-link"><a href=""></a>Home</li>
-        <li class="nav-link"><a href=""></a>About</li>
-        <li class="nav-link"><a href=""></a>Skills</li>
-        <li class="nav-link"><a href=""></a>Products</li>
-      </ul>
-    </nav>
-
+    <div id="nav">
+      <span class="nav-btn" id="nav-btn">
+        <i class="fas fa-bars"></i>
+      </span>
+      <nav class="navbar" id="navbar">
+        <header>
+          <span class="nav-close"><i class="far fa-window-close"></i></span>
+        </header>
+        <ul class="navigation">
+          <li><a href="#header" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+        </ul>
+      </nav>
+    </div>
     <!-- header  -->
-    <header class="main__heading">
+    <header id="header" class="main__heading">
       <div class="banner">
         <h2>discover the rich bold flavor</h2>
         <h1>
@@ -45,7 +46,7 @@
     <div class="content-divider"></div>
 
     <!-- skills -->
-    <section class="skills clearfix">
+    <section id="skills" class="skills clearfix">
       <article class="skill">
         <span class="skill-icon"><i class="fas fa-mug-hot"></i></span>
         <h4 class="title">Made in India</h4>
@@ -76,7 +77,7 @@
       </article>
     </section>
     <!-- about section  -->
-    <section>
+    <section id="about">
       <div class="section-center clearfix">
         <article class="about-img">
           <div class="about-container">
@@ -99,7 +100,7 @@
     </section>
 
     <!-- products -->
-    <section class="products-info">
+    <section id="products" class="products-info">
       <div class="section-center">
         <article class="about-products">
           <div class="section-title">
@@ -212,7 +213,7 @@
             <h4 class="title">
               <span><i class="fas fa-envelope"></i>Email</span>
             </h4>
-            <h4 class="text">vijay.vuex@gmail.com</h4>
+            <h4 class="text-mail">vijay.vuex@gmail.com</h4>
           </div>
           <div class="contact-item">
             <h4 class="title">
@@ -223,17 +224,29 @@
         </article>
         <article class="contact-form">
           <h2>Contact Us</h2>
-          <form action="">
+          <form action="https://formspree.io/f/xpzkdepv" method="POST">
             <div class="form-group">
-              <input class="form-control" type="text" placeholder="Name" />
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+              />
               <input
                 class="form-control"
                 type="email"
-                name=""
+                email="email"
                 placeholder="email"
+                required
               />
-              <textarea class="form-control" rows="5"></textarea>
-              <button class="btn contact-btn">Submit here</button>
+              <textarea
+                name="message"
+                placeholder="message"
+                class="form-control"
+                rows="5"
+              ></textarea>
+              <button type="submit" class="btn contact-btn">Submit here</button>
             </div>
           </form>
         </article>
