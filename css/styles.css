@@ -520,3 +520,15 @@ p {
     font-size: 0.7rem;
   }
 }
+@media screen and (max-width: 448px) {
+  .contact-container {
+    text-align: center;
+    margin: 2rem 1rem;
+  }
+  .icon {
+    bottom: 12rem;
+  }
+  #products {
+    margin: 1rem;
+  }
+}

@@ -3,7 +3,7 @@ const navBtn = document.getElementById("nav-btn");
 const navbar = document.getElementById("navbar");
 const navOut = document.getElementsByClassName("main__heading")[0];
 const navlinks = document.getElementsByClassName("nav-link");
-console.log(navlinks);
+// console.log(navlinks);
 
 const navClose = document.getElementsByClassName("nav-close")[0];
 // show nav
@@ -24,3 +24,18 @@ window.addEventListener("click", (e) => {
     }
   });
 });
+
+let prevScrollpos = window.pageYOffset;
+// console.log(prevScrollpos);
+window.onscroll = function () {
+  let currScrollpos = window.pageYOffset;
+  // console.log(prevScrollpos);
+
+  if (prevScrollpos > 600) {
+    // console.log("hiii");
+    navBtn.style.display = "none";
+  } else if (currScrollpos) {
+    navBtn.style.display = "block";
+  }
+  prevScrollpos = currScrollpos;
+};
